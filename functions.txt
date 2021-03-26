@@ -1,0 +1,113 @@
+1.What is function ?
+ANS- =>Functions are used to divide a large C program into smaller pieces.=>A Function can be called multiple times to provide reusability and modularity to the C program.
+    =>Also called 'Procedure'or'Subroutine'.
+    
+|SYNTAX|
+
+    return_type Function_name (Datatype par_1, Datatype par_2)
+    {
+        //code to be executed
+    }
+    
+|Advantages|
+
+=> We can avoid rewriting the same logic through Functions.
+=> We can divide the work among programmers using Functions.
+=> We can easily debug a program using Functions
+
+|Declaration|- A function is declared to tell the compiler about about its existence.
+|Defination|- A function is defined to get some task done.
+|Call|- A functions is called in order to be used.
+
+2.Types of function:
+    a) Library Functions-Functions included in C header files.
+    b) User Defined Functions-Functions created by C programmers to reducecomplexity of a program.
+    
+|Types of User-Defined function:|
+
+i) Without arguments, Without return value.
+
+#include <stdio.h>
+void name()
+{
+    printf("I am Aman!\n");
+}
+int main()
+{
+    name();
+    return 0;
+}
+
+ii) Without arguments, With return value.
+
+#include <stdio.h>
+int takenumber()
+{
+    int i;
+    printf("Enter a number:\n");
+    scanf("%d",&i);
+    return i;
+}
+int main()
+{
+    int a;
+    a = takenumber();
+    printf("You entered: %d\n",a);
+    return 0;
+}
+
+iii) With arguments, Without return value.
+
+#include <stdio.h>
+void printstar(int n)
+{
+    for(int i=1;i<=n;i++)
+    {
+        printf("%c",'*');
+    }
+}
+int main()
+{
+    printstar(7);    //*******
+    return 0;
+}
+
+iv) With arguments, With return value.
+
+|type 1|
+
+#include <stdio.h>
+int sum(int a, int b)
+{
+    return a+b;
+}
+int main()
+{
+    int a,b,c;
+    a=9;
+    b=87;
+    c=sum(a,b);
+    printf("The sum is: %d\n",c);
+    return 0;
+}
+
+|type 2|
+
+#include <stdio.h>
+int sum (int a, int b);   //Declaration
+
+int main()
+{
+    int a,b,c;
+    a=6;
+    b=7;
+    c=sum(a,b);
+    printf("The sum is: %d\n",c);
+    return 0;
+}
+int sum(int a, int b)
+{
+    return a+b;
+}
+
+            ===================
